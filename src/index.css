@@ -41,7 +41,7 @@
     --secondary-foreground: oklch(1 0 0);        /* #ffffff - text on secondary */
 
     /* ===== Neutral / Muted ===== */
-    --muted: oklch(0.968 0.006 247.9);           /* #f1f5f9 - subtle background */
+    --muted: oklch(0.9219 0 0);           /* #e5e5e5 - subtle background */
     --muted-foreground: oklch(0.443 0 0);        /* #727272 - muted/subtext */
 
     /* ===== Accent & Highlights ===== */

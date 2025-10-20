@@ -6,7 +6,9 @@ import RegisterPage from "@features/auth/pages/RegisterPage.tsx";
 import AuthLayout from "@components/layout/AuthLayout.tsx";
 import DashboardLayout from "@components/layout/DashboardLayout.tsx";
 import HomePage from "@features/home/pages/HomePage.tsx";
-import ProductPage from "@features/Product/pages";
+
+import ProductCreatePage from "@features/Product/pages/create.tsx";
+import ProductsPage from "@features/Product/pages";
 
 export const router = createBrowserRouter([
     {
@@ -20,7 +22,15 @@ export const router = createBrowserRouter([
         element: <DashboardLayout/>,   // with navbar/footer
         children: [
             {path: "/", element: <HomePage/>},
-            {path: "products", element: <ProductPage/>},
+            {
+                path: "products",
+                children: [
+                    {index: true, element: <ProductsPage/>},               // /products
+                    {path: "new", element: <ProductCreatePage/>},          // /products/new
+                    // { path: ":id", element: <ProductDetailsPage /> },         // /products/:id
+                    // { path: ":id/edit", element: <ProductEditPage /> },       // /products/:id/edit
+                ],
+            },
             // dashboard/product routes go here
         ],
     },
