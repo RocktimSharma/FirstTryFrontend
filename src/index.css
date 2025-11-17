@@ -3,7 +3,6 @@
 
 
 
-
 .sidebar-item{
     color: var(--foreground);
 }
@@ -53,8 +52,8 @@
     --destructive-foreground: oklch(1 0 0);      /* #ffffff - text on destructive */
 
     /* ===== Borders & Inputs ===== */
-    --border: oklch(0.9219 0 0);                 /* #e5e5e5 - border color */
-    --input: oklch(0.9219 0 0);                  /* #e5e5e5 - input border */
+    --border: oklch(0.88 0.008 250);                 /* #e5e5e5 - border color */
+    --input: oklch(0.968 0.006 247.9);                  /* #f1f5f9 - input border */
     --ring: oklch(0.6225 0.2421 300.17);         /* #a153ff - focus ring */
 
     /* ===== Radius ===== */

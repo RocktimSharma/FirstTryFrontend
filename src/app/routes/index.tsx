@@ -14,7 +14,7 @@ export const router = createBrowserRouter([
     {
         element: <AuthLayout/>,   // no navbar/footer
         children: [
-            {path: "/login", element: <LoginPage/>},
+            {path: "login/*", element: <LoginPage/>},
             {path: "/register", element: <RegisterPage/>},
         ],
     },
