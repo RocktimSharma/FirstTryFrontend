@@ -1,6 +1,6 @@
 import {Heart} from "lucide-react";
 
-const ProductPage = () => {
+const ProductsPage = () => {
     return (
         <div className={`flex justify-between items-center h-full w-full text-center`}>
 
@@ -15,4 +15,4 @@ const ProductPage = () => {
     );
 };
 
-export default ProductPage;
+export default ProductsPage;

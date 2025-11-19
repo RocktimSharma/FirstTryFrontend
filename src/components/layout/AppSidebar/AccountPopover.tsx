@@ -5,6 +5,7 @@ import { Button } from "@components/ui/button";
 import { cn } from "@lib/utils";
 import { ChevronsUpDown, LogOut, PlusCircle, Users } from "lucide-react";
 import { Command, CommandGroup, CommandItem, CommandList } from "@components/ui/command";
+import {useClerk} from "@clerk/clerk-react";
 
 interface AccountPopoverProps {
     sidebarOpen?: boolean;
@@ -12,7 +13,7 @@ interface AccountPopoverProps {
 
 export const AccountPopover = ({ sidebarOpen = true }: AccountPopoverProps) => {
     const [open, setOpen] = useState(false);
-
+    const { signOut } = useClerk()
     return (
         <Popover open={open} onOpenChange={setOpen}>
             <PopoverTrigger asChild>
@@ -53,7 +54,12 @@ export const AccountPopover = ({ sidebarOpen = true }: AccountPopoverProps) => {
                 <Command className="bg-secondary text-secondary-foreground">
                     <CommandList>
                         <CommandGroup>
-                            <CommandItem className="text-secondary-foreground bg-destructive data-[selected=true]:bg-destructive/80 !data-[selected=true]:text-foreground hover:text-foreground">
+                            <CommandItem
+                                onSelect={() => {
+                                    signOut({ redirectUrl: "/login" });
+                                }}
+
+                                className="text-secondary-foreground bg-destructive data-[selected=true]:bg-destructive/80 !data-[selected=true]:text-foreground hover:text-foreground">
                                 <LogOut strokeWidth={2} className="text-secondary-foreground rotate-180" />
                                 Logout
                             </CommandItem>
