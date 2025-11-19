@@ -9,8 +9,14 @@ import HomePage from "@features/home/pages/HomePage.tsx";
 
 import ProductCreatePage from "@features/Product/pages/create.tsx";
 import ProductsPage from "@features/Product/pages";
+import SSOCallback from "@features/auth/pages/sso-callback.tsx";
 
 export const router = createBrowserRouter([
+    {
+        path: "/sso-callback",
+        element: <SSOCallback />,
+    },
+
     {
         element: <AuthLayout/>,   // no navbar/footer
         children: [

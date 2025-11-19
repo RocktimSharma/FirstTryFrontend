@@ -4,8 +4,6 @@ import {useEffect, useState} from "react";
 import {FaApple} from "react-icons/fa";
 import {FcGoogle} from "react-icons/fc";
 import {useSignIn} from "@clerk/clerk-react";
-
-import type {LoginFormInputs} from "@/types/auth";
 import {ExtendedInput} from "@components/extensions/input.tsx";
 import {Label} from "@components/ui/label.tsx";
 import {toast} from "sonner";
@@ -13,7 +11,7 @@ import OtpInput from "@components/auth/OtpInput.tsx";
 
 const LoginPage = () => {
 
-    const { signIn, isLoaded, setActive } = useSignIn();
+    const {signIn, isLoaded, setActive} = useSignIn();
 
     // step 1 → email
     // step 2 → OTP
@@ -37,9 +35,9 @@ const LoginPage = () => {
         return "";
     };
 
-    // --------------------------------------------------------------------
+
     // Send Email OTP
-    // --------------------------------------------------------------------
+
     const sendEmailOtp = async (e?: React.FormEvent) => {
         if (e) e.preventDefault();
 
@@ -76,9 +74,9 @@ const LoginPage = () => {
         }
     };
 
-    // --------------------------------------------------------------------
+
     // Verify OTP
-    // --------------------------------------------------------------------
+
     const onVerifyOtp = async (e: React.FormEvent) => {
         e.preventDefault();
 
@@ -93,7 +91,7 @@ const LoginPage = () => {
             });
 
             if (attempt?.status === "complete") {
-                await setActive({ session: attempt.createdSessionId });
+                await setActive({session: attempt.createdSessionId});
                 toast.success("Logged in successfully!");
                 window.location.href = "/";
             }
@@ -109,12 +107,11 @@ const LoginPage = () => {
         }
     };
 
-    // --------------------------------------------------------------------
+
     // Resend OTP
-    // --------------------------------------------------------------------
     const handleResend = async () => {
         if (!isLoaded || !email || loading) return;
-        sendEmailOtp(); // same function
+        await sendEmailOtp(); // same function
     };
 
     // timer countdown
@@ -253,7 +250,7 @@ const LoginPage = () => {
                                         type="button"
                                         className="text-primary hover:underline disabled:opacity-40"
                                         disabled={timer > 0 || loading}
-                                        // onClick={handleResend}
+                                        onClick={handleResend}
                                     >
                                         {loading ? "Resending..." : "Resend"}
                                     </button>
