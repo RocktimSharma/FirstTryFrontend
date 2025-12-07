@@ -39,7 +39,7 @@ export function PageSubHeader({
 
     return (
         <div
-            className={`flex items-center justify-between  p-4 ${className}`}
+            className={`flex items-center justify-between  py-4 ${className}`}
         >
             <div className="flex items-center gap-2">
                 {showBack && (
@@ -56,7 +56,7 @@ export function PageSubHeader({
                     {
                         subTitle && <small className={`text-xs font-light block leading-tight text-secondary`}>{subTitle}</small>
                     }
-                    <h3 className="text-xl capitalize font-normal font-medium leading-tight">{title}</h3>
+                    <h3 className="text-lg capitalize font-medium leading-tight">{title}</h3>
                 </div>
 
             </div>
@@ -66,9 +66,10 @@ export function PageSubHeader({
 
                 {secondaryButton && (
                     <Button
-                        className={`bg-muted font-md rounded-sm text-foreground font-normal shadow-none hover:bg-primary/5 hover:text-foreground`}
+                        className={`bg-muted font-md border-none text-xs rounded-sm text-foreground font-normal shadow-none hover:bg-primary/5 hover:text-foreground`}
                         variant={secondaryButton.variant ?? "outline"}
                         onClick={secondaryButton.onClick}
+
                     >
                         {secondaryButton.label}
                     </Button>
@@ -76,9 +77,10 @@ export function PageSubHeader({
 
                 {primaryButton && (
                     <Button
-                        className={'rounded-sm'}
+                        className={'rounded-sm shadow-none text-xs'}
                         variant={primaryButton.variant ?? "default"}
                         onClick={primaryButton.onClick}
+
                     >
                         {primaryButton.label}
                     </Button>

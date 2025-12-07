@@ -10,16 +10,18 @@ const DashboardLayout = () => {
     return (
 
         <>
-            <SignedIn><SidebarProvider>
-                <AppSidebar/>
-                <main className={`p-2 w-full h-[100dvh]`}>
-                    <AppHeader/>
-                    <Outlet/>
-                </main>
-            </SidebarProvider>
+            <SignedIn>
+                <SidebarProvider>
+                    <AppSidebar/>
+                    <main className={`p-2 w-full h-[100dvh]`}>
+                        <AppHeader/>
+                        <div className={'px-4 py-3'}>
+                        <Outlet/>
+                        </div>
+                    </main>
+                </SidebarProvider>
             </SignedIn>
             <SignedOut>
-                {/* Redirect unauthenticated users to the login page */}
                 <RedirectToSignIn/>
             </SignedOut>
         </>
