@@ -1,6 +1,7 @@
 
 import {PageSubHeader} from "@components/common/PageSubHeader.tsx";
-import {Button} from "@components/ui/button.tsx";
+import ProductCreateFrom from "@features/Product/forms/create.tsx";
+
 
 const ProductCreatePage = () => {
     return (
@@ -20,6 +21,7 @@ const ProductCreatePage = () => {
                 }}
 
             />
+            <ProductCreateFrom/>
         </div>
     );
 };
