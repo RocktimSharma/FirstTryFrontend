@@ -4,22 +4,16 @@ import {CardContent} from "@components/ui/card.tsx";
 import {FormField} from "@components/forms/FormField.tsx";
 import {ExtendedTextarea} from "@components/extensions/textarea.tsx";
 
-import {
-    Select,
-    SelectContent,
-    SelectGroup,
-    SelectItem,
-    SelectLabel,
-    SelectValue,
-} from "@components/ui/select"
-import {ExtendedSelectTrigger,ExtendedSelectItem} from "@components/extensions/select.tsx";
-import {IoCloudUploadOutline} from "react-icons/io5";
-import {Input} from "@components/ui/input.tsx";
+import {Select, SelectContent, SelectValue,} from "@components/ui/select"
+import {ExtendedSelectItem, ExtendedSelectTrigger} from "@components/extensions/select.tsx";
+import ImageDropzone from "@features/Product/forms/ImageDropzone.tsx";
+
 //https://github.com/kushagrasarathe/image-upload-shadcn/blob/main/src/components/image-upload.tsx
+
 const ProductCreateFrom = () => {
 
     return (
-        <div className={'grid grid-cols-1 md:grid-cols-2 space-4'}>
+        <div className={'grid grid-cols-1 md:grid-cols-2 space-4 gap-4'}>
             <div className={`space-y-4`}>
 
                 <div>
@@ -47,11 +41,11 @@ const ProductCreateFrom = () => {
                                     </ExtendedSelectTrigger>
                                     <SelectContent>
 
-                                            <ExtendedSelectItem value="havels">Havels</ExtendedSelectItem>
-                                            <ExtendedSelectItem value="syska">Syska</ExtendedSelectItem>
-                                            <ExtendedSelectItem value="blueberry">Blueberry</ExtendedSelectItem>
-                                            <ExtendedSelectItem value="apple">Apple</ExtendedSelectItem>
-                                            <ExtendedSelectItem value="Samsung">Samsung</ExtendedSelectItem>
+                                        <ExtendedSelectItem value="havels">Havels</ExtendedSelectItem>
+                                        <ExtendedSelectItem value="syska">Syska</ExtendedSelectItem>
+                                        <ExtendedSelectItem value="blueberry">Blueberry</ExtendedSelectItem>
+                                        <ExtendedSelectItem value="apple">Apple</ExtendedSelectItem>
+                                        <ExtendedSelectItem value="Samsung">Samsung</ExtendedSelectItem>
 
                                     </SelectContent>
                                 </Select>
@@ -78,32 +72,34 @@ const ProductCreateFrom = () => {
             <div>
                 <p className={'mb-1 font-medium'}>Product Images</p>
                 <ExtendedCard>
-                    <CardContent className={'space-y-3'}>
-                        <div>
-                            <div className="text-center">
-                                <div className="border p-2 rounded-md max-w-min mx-auto">
-                                    <IoCloudUploadOutline size="1.6em" />
-                                </div>
+                    <CardContent className="grid grid-cols-2 sm:grid-cols-3 gap-3">
 
-                                <p className="mt-2 text-sm text-gray-500 dark:text-gray-400">
-                                    <span className="font-semibold">Drag an image</span>
-                                </p>
-                                <p className="text-xs text-gray-400 dark:text-gray-400">
-                                    Select a image or drag here to upload directly
-                                </p>
+                        {/* Box 1 */}
+                        <div className="aspect-square w-full">
+                            <ImageDropzone />
+                        </div>
+
+                        {/* Box 2 */}
+                        <div className="aspect-square w-full">
+                            <ImageDropzone />
+                        </div>
+
+                        {/* Wrapper: becomes `contents` on mobile (so children become direct grid items),
+      and becomes a 2-row grid at sm+ (so children stack and take the 3rd column). */}
+                        <div className="contents sm:grid sm:grid-rows-2 sm:gap-3 sm:aspect-square">
+                            {/* These are treated as independent grid items on mobile */}
+                            <div className="aspect-square w-full h-full">
+                                <ImageDropzone />
                             </div>
-                            <Input
 
-                                id="dropzone-file"
-                                accept="image/png, image/jpeg"
-                                type="file"
-                                className="hidden"
-                                // disabled={loading || uploadedImagePath !== null}
-                                // onChange={handleImageChange}
-                            />
+                            <div className="aspect-square w-full h-full">
+                                <ImageDropzone />
+                            </div>
                         </div>
 
                     </CardContent>
+
+
                 </ExtendedCard>
             </div>
         </div>
