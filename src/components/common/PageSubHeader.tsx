@@ -54,14 +54,14 @@ export function PageSubHeader({
                 )}
                 <div>
                     {
-                        subTitle && <small className={`text-xs font-light block leading-tight text-secondary`}>{subTitle}</small>
+                        subTitle && <small className={`block text-xs font-light leading-tight text-secondary`}>{subTitle}</small>
                     }
                     <h3 className="text-lg capitalize font-medium leading-tight">{title}</h3>
                 </div>
 
             </div>
 
-            <div className="flex gap-2 items-center">
+            <div className="hidden md:flex gap-2 items-center">
                 {actions}
 
                 {secondaryButton && (
