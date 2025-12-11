@@ -15,7 +15,7 @@ const DashboardLayout = () => {
                     <AppSidebar/>
                     <main className={`p-2 w-full h-[100dvh]`}>
                         <AppHeader/>
-                        <div className={'px-4 py-3'}>
+                        <div className={'md:px-4 py-3'}>
                         <Outlet/>
                         </div>
                     </main>
