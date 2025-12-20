@@ -1,5 +1,5 @@
 import * as React from "react"
-import {Card} from "@/components/ui/card"
+import {Card,CardHeader,CardContent,CardAction,CardTitle,CardDescription,CardFooter} from "@/components/ui/card"
 import {cn} from "@/lib/utils"
 
 
@@ -13,7 +13,7 @@ export function ExtendedCard({
     return (
         <Card
             className={cn(
-                "rounded-sm shadow-none border border-border ",
+                "rounded-sm gap-2 border-none shadow-none drop-shadow-xs ",
                 className
             )}
             {...props}
@@ -23,3 +23,12 @@ export function ExtendedCard({
 
 
 ExtendedCard.displayName = "ExtendedCard";
+
+export {
+    CardHeader,
+    CardContent,
+    CardAction,
+    CardTitle,
+    CardDescription,
+    CardFooter,
+}

@@ -22,8 +22,8 @@ const TimeRangeSelector: React.FC<TimeRangeSelectorProps> = ({
     const buttonClass = (value: TimeRange) =>
         `px-4 py-2 text-xs rounded-full border shadow-none  font-light ${
             selected === value
-                ? "bg-primary text-white border-primary"
-                : "bg-transparent text-secondary border-border hover:bg-card"
+                ? "bg-primary text-primary-foreground border-primary"
+                : "bg-secondary text-secondary-foreground border-border hover:bg-muted hover:text-bg-muted-foreground"
         } transition-colors duration-150`
 
     return (

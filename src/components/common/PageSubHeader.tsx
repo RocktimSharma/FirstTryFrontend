@@ -46,32 +46,38 @@ export function PageSubHeader({
                     <Button
                         variant="outline"
                         size="icon"
-                        className={'shadow-none text-secondary hover:bg-card/60 hover:text-foreground'}
+                        className={'shadow-none bg-secondary text-secondary-foreground hover:bg-muted hover:text-muted-foreground'}
                         onClick={() => navigate(-1)}
                     >
-                        <ArrowLeft strokeWidth={1} className={`'text-secondary `}/>
+                        <ArrowLeft strokeWidth={1.5} />
                     </Button>
                 )}
                 <div>
                     {
-                        subTitle && <small className={`block text-xs font-light leading-tight text-secondary`}>{subTitle}</small>
+                        subTitle && <small className={`block text-xs font-light leading-tight text-muted-foreground`}>{subTitle}</small>
                     }
-                    <h3 className="text-lg capitalize font-medium leading-tight">{title}</h3>
+                    <h3 className="sm:text-md md:text-lg capitalize font-medium leading-tight">{title}</h3>
                 </div>
 
             </div>
 
-            <div className="hidden md:flex gap-2 items-center">
+            <div className="space-x-2 items-center">
                 {actions}
 
                 {secondaryButton && (
                     <Button
-                        className={`bg-muted font-md border-none text-xs rounded-sm text-foreground font-normal shadow-none hover:bg-primary/5 hover:text-foreground`}
+                        //className={`bg-muted font-md border-none text-xs rounded-sm text-foreground font-normal shadow-none hover:bg-primary/5 hover:text-foreground`}
                         variant={secondaryButton.variant ?? "outline"}
+                        className={`bg-secondary shadow-none text-secondary-foreground hover:bg-muted hover:text-muted-foreground text-xs`}
                         onClick={secondaryButton.onClick}
 
                     >
-                        {secondaryButton.label}
+                        <span className={'md:hidden'}>
+                                  Draft
+                        </span>
+                        <span className={'hidden md:flex'}>
+                                  {secondaryButton.label}
+                        </span>
                     </Button>
                 )}
 
@@ -82,7 +88,13 @@ export function PageSubHeader({
                         onClick={primaryButton.onClick}
 
                     >
-                        {primaryButton.label}
+
+                        <span className={'md:hidden'}>
+                                 Save
+                        </span>
+                        <span className={'hidden md:flex'}>
+                              {primaryButton.label}
+                        </span>
                     </Button>
                 )}
             </div>

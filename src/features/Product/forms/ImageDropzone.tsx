@@ -12,7 +12,7 @@ const ImageDropzone = () => {
         }
     };
     return (
-        <div onClick={handleClick} className="relative w-full h-full cursor-pointer overflow-hidden rounded-xl border-2 border-dashed border-slate-300 bg-white flex items-center justify-center hover:border-indigo-400 transition"
+        <div onClick={handleClick} className="relative w-full h-full cursor-pointer overflow-hidden rounded-xl border-[1.5px] border-dashed  flex items-center justify-center  transition"
         >
             <input
                 ref={inputRef}
@@ -22,7 +22,7 @@ const ImageDropzone = () => {
                 onChange={onInputChange}
                 className="hidden"
             />
-            <div className={'flex flex-col justify-center items-center m-4 text-center gap-1 text-secondary'}>
+            <div className={'flex flex-col justify-center items-center m-4 text-center gap-1 text-muted-foreground'}>
                 <ImageUp strokeWidth={1} />
                 <p className={'block text-xs'}><span className={'underline text-accent'}>Click to upload</span> or drag or drop</p>
             </div>

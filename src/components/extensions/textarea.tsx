@@ -13,7 +13,7 @@ export const ExtendedTextarea = React.forwardRef<
         <Textarea
             ref={ref}
             className={cn(
-                "shadow-none placeholder:text-secondary focus-visible:ring-0 focus-visible:border-secondary/60 border-border rounded-sm",
+                "placeholder:text-xs placeholder:text-muted-foreground/70 shadow-none bg-transparent  focus-visible:ring-0 focus-visible:border-accent border-border rounded-sm",
                 className
             )}
             {...props}

@@ -19,7 +19,7 @@ export function FormField({
                           }: FormFieldProps) {
     return (
         <div className={cn("flex flex-col gap-1", className)}>
-            <Label className="text-xs text-muted-foreground flex gap-0.5">
+            <Label className="text-xs  flex gap-0.5">
                 {label}
                 {required && <span className="text-destructive">*</span>}
             </Label>
