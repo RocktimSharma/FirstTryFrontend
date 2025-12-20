@@ -1,21 +1,8 @@
-import React, { useState } from "react"
-import { Input } from "@components/ui/input"
-import { Popover, PopoverContent, PopoverTrigger } from "@components/ui/popover"
-import {
-    Command,
-    CommandInput,
-    CommandEmpty,
-    CommandGroup,
-    CommandItem,
-    CommandSeparator,
-    CommandList
-} from "@components/ui/command"
+import {useState} from "react"
+import {Input} from "@components/ui/input"
+import {Popover, PopoverTrigger} from "@components/ui/popover"
 import {Button} from "@components/ui/button.tsx";
 import {Search} from "lucide-react";
-
-
-
-
 
 
 const AppSearchBar = () => {
@@ -44,7 +31,7 @@ const AppSearchBar = () => {
                         className="lg:hidden bg-card text-secondary hover:bg-card/60 shadow-none rounded-full"
                         onClick={() => setOpen(true)}
                     >
-                        <Search color="#727272" strokeWidth={1} />
+                        <Search color="#727272" strokeWidth={1}/>
                     </Button>
                 </div>
 

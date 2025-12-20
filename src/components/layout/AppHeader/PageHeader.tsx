@@ -29,7 +29,7 @@ const PageHeader = () => {
                         {/* Always start with Dashboard */}
                         <BreadcrumbItem>
                             <BreadcrumbLink asChild>
-                                <Link className={`!text-secondary text-xs !font-light`} to="/">Dashboard</Link>
+                                <Link className={`!text-muted-foreground text-xs !font-light`} to="/">Dashboard</Link>
                             </BreadcrumbLink>
                         </BreadcrumbItem>
 

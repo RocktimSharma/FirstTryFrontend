@@ -13,7 +13,7 @@ export const ExtendedInput = React.forwardRef<HTMLInputElement, InputProps>(
                 ref={ref}
                 className={cn(
                     // <- put the extra classes you want here:
-                    "shadow-none placeholder:text-secondary focus-visible:ring-0 focus-visible:border-secondary/60 border-border rounded-sm",
+                    "shadow-none  placeholder:text-xs placeholder:text-muted-foreground/70 bg-transparent focus-visible:ring-0 focus-visible:border-accent border-border rounded-sm",
                     className
                 )}
                 {...props}

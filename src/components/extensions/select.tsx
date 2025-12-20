@@ -13,7 +13,7 @@ export const ExtendedSelectTrigger = React.forwardRef<
         <SelectTrigger
             ref={ref}
             className={cn(
-                "shadow-none w-full placeholder:text-secondary focus-visible:ring-0 focus-visible:border-secondary/60 border-border rounded-sm",
+                "shadow-none bg-transparent w-full text-xs text-muted-foreground/70 focus-visible:ring-0 focus-visible:border-accent border-border rounded-sm",
                 className
             )}
             {...props}
