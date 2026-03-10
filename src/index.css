@@ -34,7 +34,9 @@
 
 @custom-variant dark (&:is(.dark *));
 :root {
-    font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
+
+    /* 2. Apply it to the document */
+    font-family: "Inter", sans-serif;
     line-height: 1.5;
     font-weight: 400;
 
