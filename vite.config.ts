@@ -22,12 +22,12 @@ export default defineConfig({
     },
   },
     server: {
-        host: "0.0.0.0",
+        host: true,
         port: 5173,
-        allowedHosts: [
-            'localhost',
-            '127.0.0.1',
-            'b12dbc45e0d2.ngrok-free.app', // ✅ wildcard for all ngrok subdomains
-        ],
+        // allowedHosts: [
+        //     'localhost',
+        //     '127.0.0.1',
+        //     'b12dbc45e0d2.ngrok-free.app', // ✅ wildcard for all ngrok subdomains
+        // ],
     },
 })
