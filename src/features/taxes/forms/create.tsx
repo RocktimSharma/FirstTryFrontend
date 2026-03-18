@@ -8,7 +8,7 @@ import {
     TaxNatureEnum
 } from "@features/taxes/types";
 import {zodResolver} from "@hookform/resolvers/zod";
-import {CardContent, Card} from "@components/extensions/card.tsx";
+import {CardContent, ExtendedCard} from "@components/extensions/card.tsx";
 import {FormField} from "@components/forms/FormField.tsx";
 import {ExtendedInput} from "@components/extensions/input.tsx";
 import {Select, SelectContent, SelectValue} from "@components/ui/select.tsx";
