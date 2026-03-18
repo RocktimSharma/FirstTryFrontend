@@ -3,8 +3,8 @@ import {FormField} from "@components/forms/FormField.tsx";
 import {Controller, useFormContext} from "react-hook-form";
 import {Select, SelectContent, SelectValue} from "@components/ui/select.tsx";
 import {ExtendedSelectItem, ExtendedSelectTrigger} from "@components/extensions/select.tsx";
-import {type TaxFormValues, TaxNatureEnum} from "@features/fms/taxes/types";
-import {CardContent, Card} from "@components/extensions/card.tsx";
+import {type TaxFormValues, TaxNatureEnum} from "@features/taxes/types";
+import {CardContent, ExtendedCard} from "@components/extensions/card.tsx";
 import {ExtendedInput} from "@components/extensions/input.tsx";
 import {ColorPickerField} from "@components/forms/ColorPicker.tsx";
 
@@ -13,7 +13,7 @@ const TaxBasicInfo = () => {
     return (
         <div>
             <p className={'mb-1 font-medium'}>Basic Information</p>
-            <Card>
+            <ExtendedCard>
                 <CardContent className={'space-y-3'}>
                     <FormField label="Tax Name" required={true} error={errors.name}>
                         <ExtendedInput
@@ -68,7 +68,7 @@ const TaxBasicInfo = () => {
                     </FormField>
                 </CardContent>
 
-            </Card>
+            </ExtendedCard>
 
         </div>
     );
