@@ -1,6 +1,6 @@
 import {Controller, useFormContext} from "react-hook-form";
 import {RoundOffMethodEnum, TaxBaseEnum, TaxCalcTypeEnum, type TaxFormValues} from "@features/taxes/types";
-import {CardContent, ExtendedCard} from "@components/extensions/card.tsx";
+import {CardContent, Card} from "@components/extensions/card.tsx";
 import {FormField} from "@components/forms/FormField.tsx";
 import {Select, SelectContent, SelectValue} from "@components/ui/select.tsx";
 import {ExtendedSelectItem, ExtendedSelectTrigger} from "@components/extensions/select.tsx";
@@ -14,7 +14,7 @@ const TaxCalculationSettings = () => {
     return (
         <div>
             <p className={'mb-1 font-medium'}>Calculation Settings</p>
-            <ExtendedCard>
+            <Card>
                 <CardContent className={'space-y-3'}>
                     <FormField label="Calculation Type" required error={errors.calculation_type}>
                         <Controller
@@ -145,7 +145,7 @@ const TaxCalculationSettings = () => {
 
                 </CardContent>
 
-            </ExtendedCard>
+            </Card>
         </div>
     );
 };
