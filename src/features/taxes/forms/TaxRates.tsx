@@ -1,18 +1,13 @@
-
-import {useFieldArray, useFormContext, useWatch} from "react-hook-form";
+import {useFieldArray, useFormContext} from "react-hook-form";
 import type {TaxFormValues} from "@features/taxes/types";
-import {Card, CardHeader, CardContent, CardTitle} from "@components/extensions/card.tsx";
-import {FormField} from "@components/forms/FormField.tsx";
-import {ExtendedInput} from "@components/extensions/input.tsx";
+import {Card, CardContent, CardHeader} from "@components/extensions/card.tsx";
 import {Button} from "@components/ui/button.tsx";
-import {Plus, Trash, Trash2} from "lucide-react";
-import TaxComponents from "@features/taxes/forms/TaxComponents.tsx";
-import {cn} from "@lib/utils.ts";
+import {Plus} from "lucide-react";
 import RateItem from "@features/taxes/forms/RateItem.tsx";
 
 const TaxRates = () => {
-    const {register,control, formState: {errors}} = useFormContext<TaxFormValues>();
-    const { fields, append, remove } = useFieldArray({
+    const {register, control, formState: {errors}} = useFormContext<TaxFormValues>();
+    const {fields, append, remove} = useFieldArray({
         control,
         name: "rates",
     });
@@ -34,7 +29,7 @@ const TaxRates = () => {
                         })}
                         className={"text-accent"}
                     >
-                        <Plus className="mr-2 h-4 w-4" />
+                        <Plus className="mr-2 h-4 w-4"/>
                         Add Rate
                     </Button>
                 </CardHeader>
