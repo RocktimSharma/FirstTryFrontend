@@ -1,4 +1,4 @@
-import {CardContent, CardHeader, ExtendedCard} from "@components/extensions/card.tsx";
+import {CardContent, CardHeader, Card} from "@components/extensions/card.tsx";
 import {ExtendedInput} from "@components/extensions/input.tsx";
 
 import {FormField} from "@components/forms/FormField.tsx";
@@ -20,7 +20,7 @@ const ProductCreateFrom = () => {
 
                 <div>
                     <p className={'mb-1 font-medium'}>Description</p>
-                    <ExtendedCard>
+                    <Card>
                         <CardContent className={'space-y-3'}>
                             <FormField label="Product Name" required>
                                 <ExtendedInput placeholder="Enter Product name"/>
@@ -30,11 +30,11 @@ const ProductCreateFrom = () => {
                             </FormField>
                         </CardContent>
 
-                    </ExtendedCard>
+                    </Card>
                 </div>
                 <div>
                     <p className={'mb-1 font-medium'}>Brand & Category</p>
-                    <ExtendedCard>
+                    <Card>
                         <CardContent className={'space-y-3'}>
                             <FormField label="Brand" required>
                                 <Select>
@@ -67,12 +67,12 @@ const ProductCreateFrom = () => {
                             </FormField>
                         </CardContent>
 
-                    </ExtendedCard>
+                    </Card>
                 </div>
                 {/*Product Variant*/}
                 <div>
                     <p className={'mb-1 font-medium'}>Variant</p>
-                    <ExtendedCard>
+                    <Card>
                         <CardHeader className={'flex items-center justify-between'}>
                             <p className={'font-medium'}>Product Variants</p>
                             <Button
@@ -166,7 +166,7 @@ const ProductCreateFrom = () => {
                             </table>
                         </CardContent>
 
-                    </ExtendedCard>
+                    </Card>
                 </div>
 
 
@@ -175,7 +175,7 @@ const ProductCreateFrom = () => {
                 {/*Product Images*/}
                 <div>
                     <p className={'mb-1 font-medium'}>Product Images</p>
-                    <ExtendedCard>
+                    <Card>
                         <CardContent className="grid grid-cols-2 sm:grid-cols-3 gap-3">
 
                             {/* Box 1 */}
@@ -204,12 +204,12 @@ const ProductCreateFrom = () => {
                         </CardContent>
 
 
-                    </ExtendedCard>
+                    </Card>
                 </div>
                 {/* Product Taxes */}
                 <div>
                     <p className={'mb-1 font-medium'}>Additional Taxes</p>
-                    <ExtendedCard>
+                    <Card>
                         <CardHeader className={'flex items-center justify-between'}>
                             <p className={'font-medium'}>Product Taxes</p>
                             <Button
@@ -238,7 +238,7 @@ const ProductCreateFrom = () => {
                         </CardContent>
 
 
-                    </ExtendedCard>
+                    </Card>
                 </div>
 
 
@@ -249,7 +249,7 @@ const ProductCreateFrom = () => {
                         <span className={'text-muted-foreground'}>    <CircleQuestionMark strokeWidth={1.5} size={18}/></span>
                     </div>
 
-                    <ExtendedCard>
+                    <Card>
                         <CardHeader className={'flex items-center justify-between'}>
                             <p className={'font-medium'}>Add More Information</p>
                             <Button
@@ -278,7 +278,7 @@ const ProductCreateFrom = () => {
                         </CardContent>
 
 
-                    </ExtendedCard>
+                    </Card>
                 </div>
             </div>
 

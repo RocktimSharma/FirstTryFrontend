@@ -8,7 +8,7 @@ import {
     TaxNatureEnum
 } from "@features/taxes/types";
 import {zodResolver} from "@hookform/resolvers/zod";
-import {CardContent, ExtendedCard} from "@components/extensions/card.tsx";
+import {CardContent, Card} from "@components/extensions/card.tsx";
 import {FormField} from "@components/forms/FormField.tsx";
 import {ExtendedInput} from "@components/extensions/input.tsx";
 import {Select, SelectContent, SelectValue} from "@components/ui/select.tsx";
@@ -17,6 +17,7 @@ import {Switch} from "@components/ui/switch.tsx";
 import {cn} from "@lib/utils.ts";
 import TaxBasicInfo from "@features/taxes/forms/TaxBasicInfo.tsx";
 import TaxCalculationSettings from "@features/taxes/forms/TaxCalculationSettings.tsx";
+import TaxRates from "@features/taxes/forms/TaxRates.tsx";
 
 const CreateTaxForm = () => {
     const methods = useForm<TaxFormValues>({
@@ -72,11 +73,12 @@ const CreateTaxForm = () => {
     return (
         <FormProvider {...methods}>
             <form onSubmit={handleSubmit(onSubmit, (errors) => console.log("Validation Errors:", errors))}
-                  className="grid grid-cols-1 md:grid-cols-2 space-4 gap-4">
-
+                  className="space-y-4">
+                <div className="grid grid-cols-1 md:grid-cols-2 space-4 gap-4">
                 <TaxBasicInfo/>
                 <TaxCalculationSettings/>
-
+                </div>
+                <TaxRates/>
 
                 {/*<div>*/}
 
