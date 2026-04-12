@@ -7,7 +7,7 @@ import {Button} from "@components/ui/button.tsx";
 import {Plus, Trash2} from "lucide-react";
 import {Select, SelectContent, SelectValue} from "@components/ui/select.tsx";
 import {ExtendedSelectItem, ExtendedSelectTrigger} from "@components/extensions/select.tsx";
-import {TaxAppliesToEnum, TaxComponentTypeEnum} from "@features/fms/taxes/types";
+import {TaxAppliesToEnum, TaxComponentTypeEnum} from "@features/taxes/types";
 import {memo} from "react";
 
 const ComponentRow = memo(({ register, errors, rateIndex, subIndex, onRemove, control }: any) => {
@@ -16,7 +16,7 @@ const ComponentRow = memo(({ register, errors, rateIndex, subIndex, onRemove, co
 
 
                 <div
-                     className={'flex flex-col md:flex-row items-stretch md:items-end justify-between  gap-2 bg-background p-3 md:p-4 rounded-sm'}>
+                     className={'flex flex-col md:flex-row items-stretch md:items-end justify-between  gap-2 bg-card p-3 md:p-4 rounded-sm'}>
                     <div
                         className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-2 items-end rounded">
                         <FormField
@@ -64,7 +64,7 @@ const ComponentRow = memo(({ register, errors, rateIndex, subIndex, onRemove, co
                                 )}
                             />
                         </FormField>
-                        <FormField label="Applies To" required={true}
+                        <FormField label="Type" required={true}
                                    error={errors?.applies_to}>
                             <Controller
                                 control={control}
@@ -76,7 +76,7 @@ const ComponentRow = memo(({ register, errors, rateIndex, subIndex, onRemove, co
                                         value={field.value}
                                     >
                                         <ExtendedSelectTrigger>
-                                            <SelectValue placeholder="Applies to"/>
+                                            <SelectValue placeholder="Select Type"/>
                                         </ExtendedSelectTrigger>
                                         <SelectContent>
                                             {/* You can map through your Enum values here */}
