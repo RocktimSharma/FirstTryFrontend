@@ -16,7 +16,7 @@ const ComponentRow = memo(({ register, errors, rateIndex, subIndex, onRemove, co
 
 
                 <div
-                     className={'flex flex-col md:flex-row items-stretch md:items-end justify-between  gap-2 bg-card p-3 md:p-4 rounded-sm'}>
+                     className={'flex flex-col md:flex-row items-stretch md:items-end justify-between  gap-2 bg-background p-3 md:p-4 rounded-sm'}>
                     <div
                         className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-2 items-end rounded">
                         <FormField
@@ -64,7 +64,7 @@ const ComponentRow = memo(({ register, errors, rateIndex, subIndex, onRemove, co
                                 )}
                             />
                         </FormField>
-                        <FormField label="Type" required={true}
+                        <FormField label="Applies To" required={true}
                                    error={errors?.applies_to}>
                             <Controller
                                 control={control}
@@ -76,7 +76,7 @@ const ComponentRow = memo(({ register, errors, rateIndex, subIndex, onRemove, co
                                         value={field.value}
                                     >
                                         <ExtendedSelectTrigger>
-                                            <SelectValue placeholder="Select Type"/>
+                                            <SelectValue placeholder="Applies to"/>
                                         </ExtendedSelectTrigger>
                                         <SelectContent>
                                             {/* You can map through your Enum values here */}
