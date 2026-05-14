@@ -1,13 +1,13 @@
 import {useFieldArray, useFormContext} from "react-hook-form";
-import type {TaxFormValues} from "@features/taxes/types";
+import type {TaxFormValues} from "@features/fms/taxes/types";
 import {Button} from "@components/ui/button.tsx";
-import {RateStatus, RateTotal} from "@features/taxes/forms/RateItem.tsx";
+import {RateStatus, RateTotal} from "@features/fms/taxes/forms/RateItem.tsx";
 import React from "react";
 import {Accordion, AccordionContent, AccordionItem, AccordionTrigger,} from "@/components/ui/accordion"
 import {Plus} from "lucide-react";
 import {FormField} from "@components/forms/FormField.tsx";
 import {ExtendedInput} from "@components/extensions/input.tsx";
-import TaxComponents from "@features/taxes/forms/TaxComponents.tsx";
+import TaxComponents from "@features/fms/taxes/forms/TaxComponents.tsx";
 
 const TODAY_STR = new Date().toISOString().split('T')[0];
 

@@ -6,9 +6,9 @@ export * from "./tax-compliance";
 
 // 2. Import them to create a "Master" Form Schema
 import {z} from "zod";
-import {TaxesSchema} from "@features/taxes/types/tax-core.ts";
-import {TaxRateSchema} from "@features/taxes/types/tax-rates.ts";
-import {TaxComplianceSchema} from "@features/taxes/types/tax-compliance.ts";
+import {TaxesSchema} from "@features/fms/taxes/types/tax-core.ts";
+import {TaxRateSchema} from "@features/fms/taxes/types/tax-rates.ts";
+import {TaxComplianceSchema} from "@features/fms/taxes/types/tax-compliance.ts";
 
 /**
  * Combined Schema for the "Create/Edit Tax" Form

@@ -1,10 +1,10 @@
 import {Card, CardContent} from "@components/extensions/card.tsx";
 import {useFormContext} from "react-hook-form";
 import {FormField} from "@components/forms/FormField.tsx";
-import {type TaxFormValues} from "@features/taxes/types";
+import {type TaxFormValues} from "@features/fms/taxes/types";
 import {FormSwitch} from "@components/forms/FormSwitch.tsx";
 import {ExtendedInput} from "@components/extensions/input.tsx";
-import {ExemptionFields} from "@features/taxes/forms/ExemptionFields.tsx";
+import {ExemptionFields} from "@features/fms/taxes/forms/ExemptionFields.tsx";
 
 const TaxCompliance = () => {
     const {register, control, formState: {errors}} = useFormContext<TaxFormValues>();

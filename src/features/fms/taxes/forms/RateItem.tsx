@@ -4,7 +4,7 @@ import {FormField} from "@components/forms/FormField.tsx";
 import {ExtendedInput} from "@components/extensions/input.tsx";
 import {Button} from "@components/ui/button.tsx";
 import {Trash2} from "lucide-react";
-import TaxComponents from "@features/taxes/forms/TaxComponents.tsx";
+import TaxComponents from "@features/fms/taxes/forms/TaxComponents.tsx";
 import {cn, formatDate} from "@lib/utils.ts";
 import { memo } from "react";
 

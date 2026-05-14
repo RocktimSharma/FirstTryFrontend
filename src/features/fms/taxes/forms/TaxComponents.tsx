@@ -7,7 +7,7 @@ import {Button} from "@components/ui/button.tsx";
 import {Plus, Trash2} from "lucide-react";
 import {Select, SelectContent, SelectValue} from "@components/ui/select.tsx";
 import {ExtendedSelectItem, ExtendedSelectTrigger} from "@components/extensions/select.tsx";
-import {TaxAppliesToEnum, TaxComponentTypeEnum} from "@features/taxes/types";
+import {TaxAppliesToEnum, TaxComponentTypeEnum} from "@features/fms/taxes/types";
 import {memo} from "react";
 
 const ComponentRow = memo(({ register, errors, rateIndex, subIndex, onRemove, control }: any) => {

@@ -3,7 +3,7 @@ import {Select, SelectContent, SelectValue} from "@components/ui/select.tsx";
 import {ExtendedSelectItem, ExtendedSelectTrigger} from "@components/extensions/select.tsx";
 import {ExtendedTextarea} from "@components/extensions/textarea.tsx";
 import {FormField} from "@components/forms/FormField.tsx";
-import {TaxExemptionTypeEnum, type TaxFormValues} from "@features/taxes/types";
+import {TaxExemptionTypeEnum, type TaxFormValues} from "@features/fms/taxes/types";
 
 export const ExemptionFields = () => {
     // Grab everything directly from the context

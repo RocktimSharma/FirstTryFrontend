@@ -1,5 +1,5 @@
 import { z } from "zod";
-import {TaxAppliesToEnum, TaxComponentTypeEnum} from "@features/taxes/types/enums.ts";
+import {TaxAppliesToEnum, TaxComponentTypeEnum} from "@features/fms/taxes/types/enums.ts";
 export const TaxRateComponentSchema = z.object({
     name: z.string().min(1).max(50),
     rate: z.coerce.number().min(0).max(100),

@@ -1,11 +1,11 @@
 import {FormProvider, useForm} from "react-hook-form";
-import {TaxFormSchema, type TaxFormValues} from "@features/taxes/types";
+import {TaxFormSchema, type TaxFormValues} from "@features/fms/taxes/types";
 import {zodResolver} from "@hookform/resolvers/zod";
-import TaxBasicInfo from "@features/taxes/forms/TaxBasicInfo.tsx";
-import TaxCalculationSettings from "@features/taxes/forms/TaxCalculationSettings.tsx";
-import TaxRates from "@features/taxes/forms/TaxRates.tsx";
-import TaxCompliance from "@features/taxes/forms/TaxCompliance.tsx";
-import Accounting from "@features/taxes/forms/Accounting.tsx";
+import TaxBasicInfo from "@features/fms/taxes/forms/TaxBasicInfo.tsx";
+import TaxCalculationSettings from "@features/fms/taxes/forms/TaxCalculationSettings.tsx";
+import TaxRates from "@features/fms/taxes/forms/TaxRates.tsx";
+import TaxCompliance from "@features/fms/taxes/forms/TaxCompliance.tsx";
+import Accounting from "@features/fms/taxes/forms/Accounting.tsx";
 
 const DEFAULT_TAX_VALUES: TaxFormValues ={
     // Core Fields

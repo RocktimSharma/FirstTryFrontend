@@ -1,5 +1,5 @@
 import {z} from "zod";
-import {RoundOffMethodEnum, TaxBaseEnum, TaxCalcTypeEnum, TaxNatureEnum} from "@features/taxes/types/enums.ts";
+import {RoundOffMethodEnum, TaxBaseEnum, TaxCalcTypeEnum, TaxNatureEnum} from "@features/fms/taxes/types/enums.ts";
 
 export const TaxesSchema = z.object({
     id: z.uuid().optional(), // Optional if creating new

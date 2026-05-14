@@ -1,5 +1,5 @@
 import {Controller, useFormContext} from "react-hook-form";
-import {RoundOffMethodEnum, TaxBaseEnum, TaxCalcTypeEnum, type TaxFormValues} from "@features/taxes/types";
+import {RoundOffMethodEnum, TaxBaseEnum, TaxCalcTypeEnum, type TaxFormValues} from "@features/fms/taxes/types";
 import {CardContent, Card} from "@components/extensions/card.tsx";
 import {FormField} from "@components/forms/FormField.tsx";
 import {Select, SelectContent, SelectValue} from "@components/ui/select.tsx";

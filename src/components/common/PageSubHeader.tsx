@@ -29,6 +29,7 @@ export function PageSubHeader({
                                   title,
                                   subTitle,
                                   showBack = true,
+
                                   primaryButton,
                                   secondaryButton,
 
