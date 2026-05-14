@@ -8,10 +8,11 @@ import DashboardLayout from "@components/layout/DashboardLayout.tsx";
 import HomePage from "@features/home/pages/HomePage.tsx";
 
 import ProductCreatePage from "@features/Product/pages/create.tsx";
-import TaxesPage from "@features/Product/pages";
+import TaxesPage from "@features/fms/taxes/pages";
 import SSOCallback from "@features/auth/pages/sso-callback.tsx";
 import ProductsPage from "@features/Product/pages";
-import TaxCreatePage from "@features/taxes/pages/create.tsx";
+import TaxCreatePage from "@features/fms/taxes/pages/create.tsx";
+import COAPage from "@features/fms/coa/pages";
 
 export const router = createBrowserRouter([
     {
@@ -44,6 +45,15 @@ export const router = createBrowserRouter([
                 children: [
                     {index: true, element: <TaxesPage/>},
                     {path: "new", element: <TaxCreatePage/>},
+                    // { path: ":id", element: <ProductDetailsPage /> },
+                    // { path: ":id/edit", element: <ProductEditPage /> },
+                ],
+            },
+            {
+                path: "finance",
+                children: [
+                    {path:"coa", element: <COAPage/>},
+                    // {path: "new", element: <TaxCreatePage/>},
                     // { path: ":id", element: <ProductDetailsPage /> },
                     // { path: ":id/edit", element: <ProductEditPage /> },
                 ],

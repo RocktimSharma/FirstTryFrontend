@@ -1,5 +1,5 @@
 import {PageSubHeader} from "@components/common/PageSubHeader.tsx";
-import CreateTaxForm from "@features/taxes/forms/create.tsx";
+import CreateTaxForm from "@features/fms/taxes/forms/create.tsx";
 
 const TaxCreatePage = () => {
     return (

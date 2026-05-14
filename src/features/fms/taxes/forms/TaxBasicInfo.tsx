@@ -3,7 +3,7 @@ import {FormField} from "@components/forms/FormField.tsx";
 import {Controller, useFormContext} from "react-hook-form";
 import {Select, SelectContent, SelectValue} from "@components/ui/select.tsx";
 import {ExtendedSelectItem, ExtendedSelectTrigger} from "@components/extensions/select.tsx";
-import {type TaxFormValues, TaxNatureEnum} from "@features/taxes/types";
+import {type TaxFormValues, TaxNatureEnum} from "@features/fms/taxes/types";
 import {CardContent, Card} from "@components/extensions/card.tsx";
 import {ExtendedInput} from "@components/extensions/input.tsx";
 import {ColorPickerField} from "@components/forms/ColorPicker.tsx";
