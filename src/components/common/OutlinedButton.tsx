@@ -1,7 +1,7 @@
 import { cn } from "@/lib/utils";
 import { Button } from "@/components/ui/button";
 
-interface PrimaryButtonProps extends React.ButtonHTMLAttributes<HTMLButtonElement> {
+interface OutlinedButtonProps extends React.ButtonHTMLAttributes<HTMLButtonElement> {
     label: string;
     icon?: React.ComponentType<{ className?: string }>;
     hideTextOnMobile?: boolean; // Flag to hide text on mobile screens
@@ -9,14 +9,14 @@ interface PrimaryButtonProps extends React.ButtonHTMLAttributes<HTMLButtonElemen
     className?: string;
 }
 
-export function PrimaryButton({
+export function OutlinedButton({
                                     label,
                                     icon: Icon, // Removed default assignment here
                                     hideTextOnMobile = false,
                                     hideIconOnMobile = false,
                                     className,
                                     ...props
-                                }: PrimaryButtonProps) {
+                                }: OutlinedButtonProps) {
     return (
         <Button
             className={cn(
@@ -25,7 +25,7 @@ export function PrimaryButton({
                 hideTextOnMobile && Icon ? "h-9 w-9 p-0 sm:h-auto sm:w-auto sm:px-3" : "",
                 className
             )}
-            variant="default"
+            variant="outline"
             {...props}
         >
             {/* Render icon conditionally ONLY if it is passed as a prop */}
