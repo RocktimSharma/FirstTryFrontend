@@ -10,7 +10,7 @@ const DashboardLayout = () => {
     return (
 
         <>
-            <SignedIn>
+            {/*<SignedIn>*/}
                 <SidebarProvider>
                     <AppSidebar/>
                     <main className={`p-2 w-full h-[100dvh]`}>
@@ -20,10 +20,10 @@ const DashboardLayout = () => {
                         </div>
                     </main>
                 </SidebarProvider>
-            </SignedIn>
-            <SignedOut>
-                <RedirectToSignIn/>
-            </SignedOut>
+            {/*</SignedIn>*/}
+            {/*<SignedOut>*/}
+            {/*    <RedirectToSignIn/>*/}
+            {/*</SignedOut>*/}
         </>
 
     );

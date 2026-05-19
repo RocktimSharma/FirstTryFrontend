@@ -9,6 +9,7 @@ import {Select, SelectContent, SelectValue} from "@components/ui/select.tsx";
 import {ExtendedSelectItem, ExtendedSelectTrigger} from "@components/extensions/select.tsx";
 import {ExtendedTextarea} from "@components/extensions/textarea.tsx";
 import {FormSwitch} from "@components/forms/FormSwitch.tsx";
+import {MetadataFieldArray} from "@components/forms/MetadataFieldArray.tsx";
 
 type AccountFormProps = {
     parentAccounts: any[];
@@ -131,6 +132,15 @@ const AccountForm = ({ parentAccounts }: AccountFormProps) => {
                         {...register("description")}
                     />
                 </FormField>
+
+
+
+                <MetadataFieldArray
+                    name={'metadata'}
+                    title="Custom Attributes"
+                    description="Add extra parameters to this account layer."
+                />
+
             </form>
         </FormProvider>
     );
