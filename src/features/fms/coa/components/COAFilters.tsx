@@ -12,9 +12,9 @@ export function COAFilters() {
     return (
         <Popover>
             <PopoverTrigger asChild>
-                <Button variant="outline" size="sm" className="h-9 px-3 text-xs">
-                    <Filter className="mr-2 h-4 w-4" />
-                    Filter
+                <Button variant="outline" size="sm" className="h-9 w-9 p-0 sm:w-auto sm:px-3 text-xs">
+                    <Filter/>
+                    <span className="hidden sm:inline">Filter</span>
                 </Button>
             </PopoverTrigger>
             <PopoverContent className="w-64 p-4" align="start">

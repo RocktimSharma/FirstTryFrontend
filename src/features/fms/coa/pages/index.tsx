@@ -7,8 +7,18 @@ import {Tabs, TabsList, TabsTrigger} from "@/components/ui/tabs";
 import {SearchBar} from "@components/common/SearchBar.tsx";
 import {COAFilters} from "@features/fms/coa/components/COAFilters.tsx";
 import {PrimaryButton} from "@components/common/PrimaryButton.tsx";
-import {Sheet, SheetContent, SheetDescription, SheetHeader, SheetTitle, SheetTrigger} from "@components/ui/sheet.tsx";
+import {
+    Sheet, SheetClose,
+    SheetContent,
+    SheetDescription,
+    SheetFooter,
+    SheetHeader,
+    SheetTitle,
+    SheetTrigger
+} from "@components/ui/sheet.tsx";
 import AccountForm from "@features/fms/coa/forms/account-form.tsx";
+import {OutlinedButton} from "@components/common/OutlinedButton.tsx";
+import {BiExport, BiPlus} from "react-icons/bi";
 
 const sampleAccounts = [
     {
@@ -141,47 +151,72 @@ const COAPage = () => {
     return (
         <div className="space-y-4">
 
+            {/* 1. Changed container to flex-col on mobile, flex-row on desktop */}
+            <div className="flex flex-col gap-3 sm:flex-row sm:items-center sm:justify-between sm:gap-2">
 
-            <div className="flex items-center justify-between gap-2">
-                <div className="flex items-center flex-1 gap-2">
+                {/* 2. Controls wrapper: column on mobile, row on desktop */}
+                <div className="flex gap-2 items-center justify-between">
+
+                    {/* Search bar takes full width on mobile, max-w-md on desktop */}
                     <SearchBar
                         placeholder="Search by account name or code..."
-                        containerClassName="max-w-md"
+                        className="flex-1"
                     />
 
-                    <Button
-                        variant="outline"
-                        size="sm"
-                        className="text-xs h-9 px-3"
-                        onClick={toggleAllAccounts}
-                    >
-                        <ChevronsUpDown className="mr-2 h-4 w-4" />
-                        {Object.keys(expanded).length > 0 ? "Collapse" : "Expand"}
-                    </Button>
+                    {/* 3. Action buttons group: side-by-side on mobile, native flow on desktop */}
+                    <div className="flex items-center gap-2">
 
-                    {/* Integrated Dropdown */}
-                    <COAFilters />
+                        <Button
+                            variant="outline"
+                            size="sm"
+                            onClick={toggleAllAccounts}
+                            className="h-9 w-9 p-0 sm:w-auto sm:px-3 text-xs"
+                        >
+                            <ChevronsUpDown />
+                            <span className="hidden sm:inline">{Object.keys(expanded).length > 0 ? "Collapse" : "Expand"}</span>
+
+                        </Button>
+
+                        {/* Integrated Dropdown fits cleanly here */}
+
+                            <COAFilters />
+
+                    </div>
                 </div>
-                <Sheet>
-                    <SheetTrigger asChild>
-                        <PrimaryButton label={"Create Account"}></PrimaryButton></SheetTrigger>
-                    <SheetContent>
-                        <SheetHeader>
-                            <SheetTitle>
-                                New Ledger Account
-                            </SheetTitle>
 
-                            <SheetDescription>
-                                Create and manage ledger accounts.
-                            </SheetDescription>
-                        </SheetHeader>
-                        <div className={'px-4'}>
-                            <AccountForm parentAccounts={allAccounts}/>
-                        </div>
+                {/* 4. Primary CTA: Sticky full width on mobile, auto width on desktop */}
+                <div className="w-full sm:w-auto flex gap-2 ">
+                    <OutlinedButton label={"Export"} icon={BiExport} className={'flex-1 sm:flex-auto'}/>
+                    <Sheet>
+                        <SheetTrigger asChild>
+                            {/* Ensure your PrimaryButton component accepts a full-width className if needed */}
+                            <PrimaryButton label={"Create Account"}  icon={BiPlus} className={'flex-1 sm:flex-auto'}/>
+                        </SheetTrigger>
 
-                    </SheetContent>
-                </Sheet>
+                        <SheetContent className="w-full sm:max-w-lg flex flex-col h-full">
+                            <SheetHeader className="px-6 pt-6">
+                                <SheetTitle>New Ledger Account</SheetTitle>
+                                <SheetDescription>Create and manage ledger accounts.</SheetDescription>
+                            </SheetHeader>
 
+                            {/* Scrolling Form Body */}
+                            <div className="flex-1 overflow-y-auto px-6 py-4 scrollbar-hide">
+                                <AccountForm parentAccounts={allAccounts}/>
+                            </div>
+
+                            {/* Sticky Sheet Footer */}
+                            <SheetFooter className="p-6 border-t bg-gray-50/50 sm:bg-transparent">
+                                <Button
+                                    type="submit"
+                                    form="account-form"
+                                    className="w-full bg-primary text-primary-foreground sm:w-auto"
+                                >
+                                    Save Account
+                                </Button>
+                            </SheetFooter>
+                        </SheetContent>
+                    </Sheet>
+                </div>
             </div>
             <Tabs value={tab}
                   onValueChange={(v) => setTab(v as "all" | "asset" | "liability" | "equity" | "revenue" | "expense")}>
