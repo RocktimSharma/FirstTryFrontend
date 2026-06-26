@@ -1,13 +1,13 @@
 import {Button} from "@components/ui/button.tsx";
 import {useEffect, useState} from "react";
 
-import {FaApple} from "react-icons/fa";
-import {FcGoogle} from "react-icons/fc";
+import {FaFacebookF, FaGoogle, FaWhatsapp} from "react-icons/fa";
 import {useSignIn} from "@clerk/clerk-react";
-import {ExtendedInput} from "@components/extensions/input.tsx";
-import {Label} from "@components/ui/label.tsx";
 import {toast} from "sonner";
 import OtpInput from "@components/auth/OtpInput.tsx";
+import {ArrowRight} from "lucide-react";
+import {MdEmail} from "react-icons/md";
+import { MdMarkEmailRead, MdLockOutline } from "react-icons/md";
 
 const LoginPage = () => {
 
@@ -144,78 +144,122 @@ const LoginPage = () => {
 
 
     return (
-        <div className="flex flex-col px-4">
+        <div className="flex flex-col w-full max-w-lg">
 
             {step === 1 && (
                 <>
-                    {/* Centered Form */}
-                    <div className="flex-grow flex items-center justify-center">
+                    <div className={'space-y-5'}>
                         <div>
                             <h1 className="font-bold !text-4xl">
-                                {greeting} <br/> Welcome Back!
+                                Welcome!
                             </h1>
 
-                            {/* OAuth Buttons */}
-                            <div className="grid grid-cols-2 gap-2 my-5">
-                                <Button
-                                    type="button"
-                                    onClick={() => signInWith("oauth_google")}
-                                    className="shadow-none border bg-background border-background hover:border hover:bg-card text-secondary  font-normal"
-                                >
-                                    <FcGoogle size={20}/> Sign in with Google
-                                </Button>
-                                <Button
-                                    type="button"
-                                    onClick={() => signInWith("oauth_apple")}
-                                    className=" shadow-none bg-background border border-background hover:border  hover:bg-card text-secondary font-normal"
-                                >
-                                    <FaApple className={`text-black`} size={20}/> Sign in with Apple
-                                </Button>
-                            </div>
-                            <div className="w-full shrink-0 flex items-center text-secondary  gap-x-2 mb-2">
-                                <div className="h-px flex-1 bg-border"></div>
-                                or
-                                <div className="h-px flex-1 bg-border"></div>
-                            </div>
+                            <p className="text-muted-foreground">
+                                Create your account to get started.
+                            </p>
+                        </div>
+
+                        <div className={'w-full space-y-2'}>
+
+                            <button
+                                className="group flex w-full cursor-pointer items-center gap-4 rounded-md border  bg-transparent p-4 text-left transition-all hover:border-primary hover:bg-primary/10 hover:shadow-md"
+                            >
+                                <div className="flex shrink-0">
+                                    <FaGoogle size={24}/>
+                                </div>
+                                <div className="min-w-0 flex-1">Continue with Google</div>
+                                <ArrowRight
+                                    size={24}
+                                    className="text-muted-foreground transition-all duration-200 group-hover:translate-x-1 group-hover:text-primary"
+                                /></button>
+                            <button
+                                className="group flex w-full cursor-pointer items-center gap-4 rounded-md border  bg-transparent p-4 text-left transition-all hover:border-primary hover:bg-primary/10 hover:shadow-md"
+                            >
+                                <div className="flex shrink-0">
+                                    <FaFacebookF size={24}/>
+                                </div>
+                                <div className="min-w-0 flex-1">Continue with Facebook</div>
+                                <ArrowRight
+                                    size={24}
+                                    className="text-muted-foreground transition-all duration-200 group-hover:translate-x-1 group-hover:text-primary"
+                                /></button>
+                            <button
+                                className="group flex w-full cursor-pointer items-center gap-4 rounded-md border  bg-transparent p-4 text-left transition-all hover:border-primary hover:bg-primary/10 hover:shadow-md"
+                            >
+                                <div className="flex shrink-0">
+                                    <FaWhatsapp size={24}/>
+                                </div>
+                                <div className="min-w-0 flex-1">Continue with Whatsapp</div>
+                                <ArrowRight
+                                    size={24}
+                                    className="text-muted-foreground transition-all duration-200 group-hover:translate-x-1 group-hover:text-primary"
+                                /></button>
 
 
-                            <form onSubmit={sendEmailOtp} className="space-y-4">
-                                {/* Email */}
-                                <div>
-                                    <Label className={`mb-1`}>Email Address</Label>
-                                    <ExtendedInput
-                                        type="email"
-                                        placeholder="name@company.com"
-                                        className={`h-10`}
-                                        value={email}
-                                        onChange={(e) => setEmail(e.target.value)}
-                                    />
-                                    {emailError && (
-                                        <p className="text-red-500 text-sm mt-1">
-                                            {emailError}
-                                        </p>
-                                    )}
-                                    <p className="text-muted-foreground text-xs mt-1">
-                                        We’ll send a verification code to your email.
-                                    </p>
+                        </div>
+
+
+                        <div
+                            className="w-full text-sm font-light shrink-0 flex items-center text-muted-foreground gap-x-2 my-3">
+                            <div className="h-px flex-1 bg-border"></div>
+                            or continue with
+                            <div className="h-px flex-1 bg-border">
+
+
+                            </div>
+
+                        </div>
+                        <div className={'w-full space-y-2'}>
+
+                            <button className="group flex w-full cursor-pointer items-center gap-4 rounded-md border bg-transparent p-4 text-left transition-all hover:border-primary hover:bg-primary/10 hover:shadow-md">
+                                <div className="flex shrink-0 rounded-sm bg-muted p-2">
+                                    <MdMarkEmailRead size={24} />
                                 </div>
 
-                                {/* Password */}
+                                <div className="min-w-0 flex-1 flex flex-col gap-px">
+                                    <p className="mb-0 leading-tight font-medium">Sign in with Email OTP</p>
+                                    <small className="text-muted-foreground leading-tight">
+                                        We'll send a one-time code to your email.
+                                    </small>
+                                </div>
+
+                                <ArrowRight
+                                    size={24}
+                                    className="text-muted-foreground transition-all duration-200 group-hover:translate-x-1 group-hover:text-primary"
+                                />
+                            </button>
 
 
-                                <Button className="w-full" type="submit" disabled={loading}>
-                                    {loading ? "Sending..." : "Send verification code"}
-                                </Button>
-                            </form>
+                            <button className="group flex w-full cursor-pointer items-center gap-4 rounded-md border bg-transparent p-4 text-left transition-all hover:border-primary hover:bg-primary/10 hover:shadow-md">
+                                <div className="flex shrink-0 rounded-sm bg-muted p-2">
+                                    <MdLockOutline size={24} />
+                                </div>
+
+                                <div className="min-w-0 flex-1 flex flex-col gap-px">
+                                    <p className="mb-0 leading-tight font-medium">Sign in with Password</p>
+                                    <small className="text-muted-foreground leading-tight">
+                                        Sign in using your email and password.
+                                    </small>
+                                </div>
+
+                                <ArrowRight
+                                    size={24}
+                                    className="text-muted-foreground transition-all duration-200 group-hover:translate-x-1 group-hover:text-primary"
+                                />
+                            </button>
+
                         </div>
                     </div>
 
-                    {/* Bottom Link */}
-                    <div className="text-center py-4">
+
+                    <div className="text-center text-sm text-muted-foreground py-5">
                         <p>
-                            Don&apos;t have an account?{" "}
-                            <a href="/signup" className="text-foreground font-bold hover:underline">
-                                Sign up
+                            Don't have an account?{" "}
+                            <a
+                                href="/signup"
+                                className="!text-primary font-bold hover:underline"
+                            >
+                                Sign Up
                             </a>
                         </p>
                     </div>

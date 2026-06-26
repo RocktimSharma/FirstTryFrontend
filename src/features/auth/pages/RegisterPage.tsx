@@ -40,7 +40,7 @@ const RegisterPage = () => {
 
 
                     <button
-                        className="group flex w-full cursor-pointer items-center gap-4 rounded-md border   p-4 text-left transition-all border-primary bg-primary/10 hover:shadow-md"
+                        className="group flex w-full cursor-pointer items-center gap-4 rounded-md border  bg-transparent p-4 text-left transition-all hover:border-primary hover:bg-primary/10 hover:shadow-md"
                     >
                         <div className="flex shrink-0">
                             <FaGoogle size={24}/>
