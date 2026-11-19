@@ -151,18 +151,18 @@ const LoginPage = () => {
                     <div className={'space-y-5'}>
                         <div>
                             <h1 className="font-bold !text-4xl">
-                                Welcome!
+                                <span className={'text-xl text-muted-foreground font-normal'}>{greeting}</span> <br/>Welcome Back!
                             </h1>
 
                             <p className="text-muted-foreground">
-                                Create your account to get started.
+                                Sign in to manage your business.
                             </p>
                         </div>
 
                         <div className={'w-full space-y-2'}>
 
                             <button
-                                className="group flex w-full cursor-pointer items-center gap-4 rounded-md border  bg-transparent p-4 text-left transition-all hover:border-primary hover:bg-primary/10 hover:shadow-md"
+                                className="group flex w-full cursor-pointer items-center gap-4 rounded-md border  bg-transparent p-4 text-left transition-all hover:border-primary hover:bg-primary/10 hover:shadow-md active:border-primary active:bg-primary/10 active:shadow-md"
                             >
                                 <div className="flex shrink-0">
                                     <FaGoogle size={24}/>
@@ -173,7 +173,7 @@ const LoginPage = () => {
                                     className="text-muted-foreground transition-all duration-200 group-hover:translate-x-1 group-hover:text-primary"
                                 /></button>
                             <button
-                                className="group flex w-full cursor-pointer items-center gap-4 rounded-md border  bg-transparent p-4 text-left transition-all hover:border-primary hover:bg-primary/10 hover:shadow-md"
+                                className="group flex w-full cursor-pointer items-center gap-4 rounded-md border  bg-transparent p-4 text-left transition-all hover:border-primary hover:bg-primary/10 hover:shadow-md active:border-primary active:bg-primary/10 active:shadow-md"
                             >
                                 <div className="flex shrink-0">
                                     <FaFacebookF size={24}/>
@@ -184,7 +184,7 @@ const LoginPage = () => {
                                     className="text-muted-foreground transition-all duration-200 group-hover:translate-x-1 group-hover:text-primary"
                                 /></button>
                             <button
-                                className="group flex w-full cursor-pointer items-center gap-4 rounded-md border  bg-transparent p-4 text-left transition-all hover:border-primary hover:bg-primary/10 hover:shadow-md"
+                                className="group flex w-full cursor-pointer items-center gap-4 rounded-md border  bg-transparent p-4 text-left transition-all hover:border-primary hover:bg-primary/10 hover:shadow-md active:border-primary active:bg-primary/10 active:shadow-md"
                             >
                                 <div className="flex shrink-0">
                                     <FaWhatsapp size={24}/>
@@ -211,7 +211,7 @@ const LoginPage = () => {
                         </div>
                         <div className={'w-full space-y-2'}>
 
-                            <button className="group flex w-full cursor-pointer items-center gap-4 rounded-md border bg-transparent p-4 text-left transition-all hover:border-primary hover:bg-primary/10 hover:shadow-md">
+                            <button className="group flex w-full cursor-pointer items-center gap-4 rounded-md border bg-transparent p-4 text-left transition-all hover:border-primary hover:bg-primary/10 hover:shadow-md active:border-primary active:bg-primary/10 active:shadow-md">
                                 <div className="flex shrink-0 rounded-sm bg-muted p-2">
                                     <MdMarkEmailRead size={24} />
                                 </div>
@@ -230,7 +230,7 @@ const LoginPage = () => {
                             </button>
 
 
-                            <button className="group flex w-full cursor-pointer items-center gap-4 rounded-md border bg-transparent p-4 text-left transition-all hover:border-primary hover:bg-primary/10 hover:shadow-md">
+                            <button className="group flex w-full cursor-pointer items-center gap-4 rounded-md border bg-transparent p-4 text-left transition-all hover:border-primary hover:bg-primary/10 hover:shadow-md active:border-primary active:bg-primary/10 active:shadow-md">
                                 <div className="flex shrink-0 rounded-sm bg-muted p-2">
                                     <MdLockOutline size={24} />
                                 </div>

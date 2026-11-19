@@ -20,11 +20,134 @@
     --card-bg: oklch(0.9958 0.0025 228.78); /* #fcfeff */
 }
 
-.sidebar-item {
-    color: var(--foreground);
-}
+/*.sidebar-item {*/
+/*    color: var(--foreground);*/
+/*}*/
 
-@custom-variant dark (&:is(.dark *));
+/*@custom-variant dark (&:is(.dark *));*/
+/*:root {*/
+/*    !* ===== Base Settings ===== *!*/
+/*    font-family: "Inter", sans-serif;*/
+/*    line-height: 1.5;*/
+/*    font-weight: 400;*/
+
+/*    color-scheme: light dark;*/
+/*    color: var(--foreground);*/
+/*    background-color: var(--background);*/
+
+/*    font-synthesis: none;*/
+/*    text-rendering: optimizeLegibility;*/
+/*    -webkit-font-smoothing: antialiased;*/
+/*    -moz-osx-font-smoothing: grayscale;*/
+
+/*    !* ===== Cohesive Light Mode Palette ===== *!*/
+/*    --background: oklch(0.9857 0.0026 286.35);       !* Cool premium slate-tint white *!*/
+/*    --foreground: oklch(0.25 0.04 210.0);            !* Deep mineral text color (same hue family) *!*/
+
+/*    !* Surfaces *!*/
+/*    --card: oklch(1 0 0);*/
+/*    --card-foreground: oklch(0.25 0.04 210.0);*/
+
+/*    --popover: oklch(1 0 0);*/
+/*    --popover-foreground: oklch(0.25 0.04 210.0);*/
+
+/*    !* Brand & Actions (Deep Premium Teal for flawless light-mode utility) *!*/
+/*    --primary: oklch(0.38 0.065 210.0);              !* Deep Mineral Navy-Teal *!*/
+/*    --primary-foreground: oklch(1 0 0);              !* Crisp white text for crisp readability *!*/
+
+/*    --secondary: oklch(0.935 0.015 210.0);           !* Very soft mineral gray-blue *!*/
+/*    --secondary-foreground: oklch(0.25 0.04 210.0);*/
+
+/*    !* Neutral / Muted *!*/
+/*    --muted: oklch(0.95 0.01 210.0);*/
+/*    --muted-foreground: oklch(0.50 0.03 210.0);*/
+
+/*    !* Accent & Highlights (Where your exact Dark Mode color shines in Light Mode) *!*/
+/*    --accent: oklch(94.5% 0.025 210.0);              !* Clean pastel tint of your exact teal for row hovers *!*/
+/*    --accent-foreground: oklch(0.38 0.065 210.0);*/
+
+/*    !* Feedback *!*/
+/*    --destructive: oklch(0.577 0.245 27.325);*/
+/*    --destructive-foreground: oklch(1 0 0);*/
+
+/*    !* Borders & Inputs *!*/
+/*    --border: oklch(0.91 0.015 210.0);               !* Perfect subtle border frame *!*/
+/*    --input: oklch(1 0 0);*/
+/*    --ring: oklch(72.5% 0.070 210.0);                !* Focus Ring utilizes your exact brand color *!*/
+
+/*    --radius: 0.625rem;*/
+
+/*    !* Charts (Chart 1 bridges directly to your dark mode primary) *!*/
+/*    --chart-1: oklch(72.5% 0.070 210.0);              !* Core Brand Teal *!*/
+/*    --chart-2: oklch(0.38 0.065 210.0);              !* Darker Accent Teal *!*/
+/*    --chart-3: oklch(0.60 0.118 184.704);*/
+/*    --chart-4: oklch(0.828 0.189 84.429);*/
+/*    --chart-5: oklch(0.769 0.188 70.08);*/
+
+/*    !* Sidebar (Anchored directly to match the Dark Theme identity) *!*/
+/*    --sidebar: oklch(0.165 0.006 301.49);            !* Grounded layout panel matching dark aesthetic *!*/
+/*    --sidebar-foreground: oklch(0.709 0 0);*/
+/*    --sidebar-primary: oklch(72.5% 0.070 210.0);      !* Your exact brand teal pops dynamically here *!*/
+/*    --sidebar-primary-foreground: oklch(0.1374 0.007 301.49);*/
+/*    --sidebar-accent: oklch(0.205 0.006 301.49);*/
+/*    --sidebar-accent-foreground: oklch(0.9851 0 0);*/
+/*    --sidebar-border: oklch(0.2739 0.005 286.03);*/
+/*    --sidebar-ring: oklch(72.5% 0.070 210.0);*/
+/*}*/
+/*!* ===== Dark Mode Palette (Fixed Blue Shades) ===== *!*/
+/*.dark {*/
+/*    !* ===== Base Settings ===== *!*/
+/*    --background: oklch(0.1374 0.007 301.49);       !* Your exact dark base *!*/
+/*    --foreground: oklch(0.9851 0 0);                !* Your exact primary text *!*/
+
+/*    !* ===== Surfaces (Step up from background for visual depth) ===== *!*/
+/*    --card: oklch(0.185 0.006 301.49);               !* Elevated surface tint *!*/
+/*    --card-foreground: oklch(0.9851 0 0);*/
+
+/*    --popover: oklch(0.185 0.006 301.49);*/
+/*    --popover-foreground: oklch(0.9851 0 0);*/
+
+/*    !* ===== Brand & Actions ===== *!*/
+/*    --primary: oklch(72.5% 0.070 210.0);      !* Your exact brand color *!*/
+/*    --primary-foreground: oklch(0.1374 0.007 301.49);!* Dark text for contrast on brand buttons *!*/
+
+/*    --secondary: oklch(71.18% 0.013 286.07);          !* Mid-tone neutral dark *!*/
+/*    --secondary-foreground: oklch(0.9851 0 0);*/
+
+/*    !* ===== Neutral / Muted ===== *!*/
+/*    --muted: oklch(0.205 0.006 301.49);             !* Subtle background block fills *!*/
+/*    --muted-foreground: oklch(0.709 0 0);           !* Your exact subheading text color *!*/
+
+/*    !* ===== Accent & Highlights ===== *!*/
+/*    --accent: oklch(72.5% 0.070 210.0);*/
+/*    --accent-foreground: oklch(0.1374 0.007 301.49);*/
+
+/*    !* ===== Feedback (Maintained accessibility alongside brand hue) ===== *!*/
+/*    --destructive: oklch(0.65 0.19 22.5);*/
+/*    --destructive-foreground: oklch(0.9851 0 0);*/
+
+/*    !* ===== Borders & Inputs ===== *!*/
+/*    --border: oklch(27.27% 0.000 0);           !* Your exact border color *!*/
+/*    --input: oklch(0.16 0.006 301.49);              !* Slightly recessed input wells *!*/
+/*    --ring: oklch(72.5% 0.070 210.0);*/
+/*    --chart-1: oklch(72.5% 0.070 210.0);       !* Brand core *!*/
+/*    --chart-2: oklch(0.75 0.12 160.0);              !* Cool complimentary mint *!*/
+/*    --chart-3: oklch(0.62 0.15 35.0);               !* Warm contrast gold/orange *!*/
+/*    --chart-4: oklch(0.55 0.20 310.0);              !* Neon accent violet *!*/
+/*    --chart-5: oklch(0.82 0.09 105.0);              !* Soft safety lime *!*/
+
+/*    !* ===== Sidebar Palette ===== *!*/
+/*    --sidebar: oklch(0.165 0.006 301.49);           !* Clean distinct grounding panel *!*/
+/*    --sidebar-foreground: oklch(0.709 0 0);         !* Default items use sub-heading gray *!*/
+/*    --sidebar-primary: oklch(72.5% 0.070 210.0);*/
+/*    --sidebar-primary-foreground: oklch(0.1374 0.007 301.49);*/
+/*    --sidebar-accent: oklch(0.205 0.006 301.49);     !* Hover state layout *!*/
+/*    --sidebar-accent-foreground: oklch(0.9851 0 0);*/
+/*    --sidebar-border: oklch(0.2739 0.005 286.03);   !* Perfectly matches layout lines *!*/
+/*    --sidebar-ring: */
+/*oklch(69.59% 0.149 162.48);*/
+/*}*/
+
 :root {
     /* ===== Base Settings ===== */
     font-family: "Inter", sans-serif;
@@ -40,133 +163,144 @@
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
 
-    /* ===== Cohesive Light Mode Palette ===== */
-    --background: oklch(0.9857 0.0026 286.35);       /* Cool premium slate-tint white */
-    --foreground: oklch(0.25 0.04 210.0);            /* Deep mineral text color (same hue family) */
+    /* ===== Light Mode Palette ===== */
+    --background: oklch(0.9857 0.0026 286.35);
+    --foreground: oklch(0.205 0.058 264.5);              /* #0f1b3d */
 
-    /* Surfaces */
-    --card: oklch(1 0 0);
-    --card-foreground: oklch(0.25 0.04 210.0);
+    --card: oklch(1 0 0);                                /* #ffffff */
+    --card-foreground: oklch(0.205 0.058 264.5);
 
     --popover: oklch(1 0 0);
-    --popover-foreground: oklch(0.25 0.04 210.0);
+    --popover-foreground: oklch(0.205 0.058 264.5);
 
-    /* Brand & Actions (Deep Premium Teal for flawless light-mode utility) */
-    --primary: oklch(0.38 0.065 210.0);              /* Deep Mineral Navy-Teal */
-    --primary-foreground: oklch(1 0 0);              /* Crisp white text for crisp readability */
+    --primary: oklch(0.205 0.058 264.5);                 /* #0f1b3d */
+    --primary-foreground: oklch(1 0 0);                  /* #ffffff */
 
-    --secondary: oklch(0.935 0.015 210.0);           /* Very soft mineral gray-blue */
-    --secondary-foreground: oklch(0.25 0.04 210.0);
+    --secondary: oklch(0.9454 0.0046 258.33);            /* #ebedf0 */
+    --secondary-foreground: oklch(0.205 0.058 264.5);
 
-    /* Neutral / Muted */
-    --muted: oklch(0.95 0.01 210.0);
-    --muted-foreground: oklch(0.50 0.03 210.0);
+    --muted: oklch(0.9842 0.0034 247.86);                /* #f8fafc */
+    --muted-foreground: oklch(0.4793 0.0253 259.18);     /* #555e6c */
 
-    /* Accent & Highlights (Where your exact Dark Mode color shines in Light Mode) */
-    --accent: oklch(94.5% 0.025 210.0);              /* Clean pastel tint of your exact teal for row hovers */
-    --accent-foreground: oklch(0.38 0.065 210.0);
+    --accent: oklch(0.645 0.245 352.5);                  /* #ff3d8b */
+    --accent-foreground: oklch(1 0 0);                   /* #ffffff */
 
-    /* Feedback */
-    --destructive: oklch(0.577 0.245 27.325);
+    --destructive: oklch(0.56 0.22 25.0);
     --destructive-foreground: oklch(1 0 0);
 
-    /* Borders & Inputs */
-    --border: oklch(0.91 0.015 210.0);               /* Perfect subtle border frame */
+    --border: oklch(0.9055 0.0063 255.48);               /* #dde0e4 */
     --input: oklch(1 0 0);
-    --ring: oklch(72.5% 0.070 210.0);                /* Focus Ring utilizes your exact brand color */
+    --ring: oklch(0.645 0.245 352.5);
 
     --radius: 0.625rem;
 
-    /* Charts (Chart 1 bridges directly to your dark mode primary) */
-    --chart-1: oklch(72.5% 0.070 210.0);              /* Core Brand Teal */
-    --chart-2: oklch(0.38 0.065 210.0);              /* Darker Accent Teal */
-    --chart-3: oklch(0.60 0.118 184.704);
-    --chart-4: oklch(0.828 0.189 84.429);
-    --chart-5: oklch(0.769 0.188 70.08);
+    /* Shop Status Tokens (Light) */
+    --status-settled: oklch(0.56 0.16 152.0);
+    --status-settled-bg: oklch(0.955 0.035 152.0);
+    --status-settled-fg: oklch(0.35 0.12 152.0);
 
-    /* Sidebar (Anchored directly to match the Dark Theme identity) */
-    --sidebar: oklch(0.165 0.006 301.49);            /* Grounded layout panel matching dark aesthetic */
-    --sidebar-foreground: oklch(0.709 0 0);
-    --sidebar-primary: oklch(72.5% 0.070 210.0);      /* Your exact brand teal pops dynamically here */
-    --sidebar-primary-foreground: oklch(0.1374 0.007 301.49);
-    --sidebar-accent: oklch(0.205 0.006 301.49);
-    --sidebar-accent-foreground: oklch(0.9851 0 0);
-    --sidebar-border: oklch(0.2739 0.005 286.03);
-    --sidebar-ring: oklch(72.5% 0.070 210.0);
+    --status-due: oklch(0.72 0.16 74.0);
+    --status-due-bg: oklch(0.965 0.04 78.0);
+    --status-due-fg: oklch(0.44 0.12 68.0);
+
+    --status-overdue: oklch(0.56 0.22 25.0);
+    --status-overdue-bg: oklch(0.955 0.04 25.0);
+    --status-overdue-fg: oklch(0.38 0.16 25.0);
+
+    --status-upi: oklch(0.54 0.17 248.0);
+    --status-upi-bg: oklch(0.95 0.032 248.0);
+    --status-upi-fg: oklch(0.34 0.13 248.0);
+
+    /* Charts */
+    --chart-1: oklch(0.645 0.245 352.5);                 /* #ff3d8b highlight */
+    --chart-2: oklch(0.205 0.058 264.5);                 /* #0f1b3d navy */
+    --chart-3: oklch(0.56 0.16 152.0);                   /* Cash / Paid */
+    --chart-4: oklch(0.54 0.17 248.0);                   /* UPI */
+    --chart-5: oklch(0.72 0.16 74.0);                    /* Khata Due */
+
+    /* Sidebar (#0f1b3d) */
+    --sidebar: oklch(0.205 0.058 264.5);
+    --sidebar-foreground: oklch(0.8252 0.0095 258.34);
+    --sidebar-primary: oklch(0.645 0.245 352.5);
+    --sidebar-primary-foreground: oklch(1 0 0);
+    --sidebar-accent: oklch(0.275 0.052 264.0);
+    --sidebar-accent-foreground: oklch(1 0 0);
+    --sidebar-border: oklch(0.29 0.048 264.0);
+    --sidebar-ring: oklch(0.645 0.245 352.5);
 }
-/* ===== Dark Mode Palette (Fixed Blue Shades) ===== */
+
 .dark {
-    /* ===== Base Settings ===== */
-    --background: oklch(0.1374 0.007 301.49);       /* Your exact dark base */
-    --foreground: oklch(0.9851 0 0);                /* Your exact primary text */
+    /* ===== Dark Mode Palette ===== */
+    --background: oklch(0.155 0.042 264.8);
+    --foreground: oklch(1 0 0);
 
-    /* ===== Surfaces (Step up from background for visual depth) ===== */
-    --card: oklch(0.185 0.006 301.49);               /* Elevated surface tint */
-    --card-foreground: oklch(0.9851 0 0);
+    --card: oklch(0.205 0.058 264.5);                    /* #0f1b3d */
+    --card-foreground: oklch(1 0 0);
 
-    --popover: oklch(0.185 0.006 301.49);
-    --popover-foreground: oklch(0.9851 0 0);
+    --popover: oklch(0.205 0.058 264.5);
+    --popover-foreground: oklch(1 0 0);
 
-    /* ===== Brand & Actions ===== */
-    --primary: oklch(72.5% 0.070 210.0);      /* Your exact brand color */
-    --primary-foreground: oklch(0.1374 0.007 301.49);/* Dark text for contrast on brand buttons */
+    --primary: oklch(0.645 0.245 352.5);                 /* #ff3d8b */
+    --primary-foreground: oklch(1 0 0);
 
-    --secondary: oklch(71.18% 0.013 286.07);          /* Mid-tone neutral dark */
-    --secondary-foreground: oklch(0.9851 0 0);
+    --secondary: oklch(0.2795 0.0368 260.03);
+    --secondary-foreground: oklch(1 0 0);
 
-    /* ===== Neutral / Muted ===== */
-    --muted: oklch(0.205 0.006 301.49);             /* Subtle background block fills */
-    --muted-foreground: oklch(0.709 0 0);           /* Your exact subheading text color */
+    --muted: oklch(0.24 0.048 264.4);
+    --muted-foreground: oklch(0.8252 0.0095 258.34);
 
-    /* ===== Accent & Highlights ===== */
-    --accent: oklch(72.5% 0.070 210.0);
-    --accent-foreground: oklch(0.1374 0.007 301.49);
+    --accent: oklch(0.645 0.245 352.5);
+    --accent-foreground: oklch(1 0 0);
 
-    /* ===== Feedback (Maintained accessibility alongside brand hue) ===== */
-    --destructive: oklch(0.65 0.19 22.5);
-    --destructive-foreground: oklch(0.9851 0 0);
+    --destructive: oklch(0.62 0.22 25.0);
+    --destructive-foreground: oklch(1 0 0);
 
-    /* ===== Borders & Inputs ===== */
-    --border: oklch(27.27% 0.000 0);           /* Your exact border color */
-    --input: oklch(0.16 0.006 301.49);              /* Slightly recessed input wells */
-    --ring: oklch(72.5% 0.070 210.0);
-    --chart-1: oklch(72.5% 0.070 210.0);       /* Brand core */
-    --chart-2: oklch(0.75 0.12 160.0);              /* Cool complimentary mint */
-    --chart-3: oklch(0.62 0.15 35.0);               /* Warm contrast gold/orange */
-    --chart-4: oklch(0.55 0.20 310.0);              /* Neon accent violet */
-    --chart-5: oklch(0.82 0.09 105.0);              /* Soft safety lime */
+    --border: oklch(0.295 0.045 264.2);
+    --input: oklch(0.18 0.046 264.6);
+    --ring: oklch(0.645 0.245 352.5);
 
-    /* ===== Sidebar Palette ===== */
-    --sidebar: oklch(0.165 0.006 301.49);           /* Clean distinct grounding panel */
-    --sidebar-foreground: oklch(0.709 0 0);         /* Default items use sub-heading gray */
-    --sidebar-primary: oklch(72.5% 0.070 210.0);
-    --sidebar-primary-foreground: oklch(0.1374 0.007 301.49);
-    --sidebar-accent: oklch(0.205 0.006 301.49);     /* Hover state layout */
-    --sidebar-accent-foreground: oklch(0.9851 0 0);
-    --sidebar-border: oklch(0.2739 0.005 286.03);   /* Perfectly matches layout lines */
-    --sidebar-ring: 
-oklch(69.59% 0.149 162.48);
+    /* Shop Status Tokens (Dark) */
+    --status-settled: oklch(0.70 0.16 152.0);
+    --status-settled-bg: oklch(0.24 0.06 152.0);
+    --status-settled-fg: oklch(0.86 0.11 152.0);
+
+    --status-due: oklch(0.78 0.15 76.0);
+    --status-due-bg: oklch(0.26 0.06 76.0);
+    --status-due-fg: oklch(0.90 0.11 78.0);
+
+    --status-overdue: oklch(0.65 0.21 25.0);
+    --status-overdue-bg: oklch(0.26 0.07 25.0);
+    --status-overdue-fg: oklch(0.88 0.12 25.0);
+
+    --status-upi: oklch(0.68 0.16 248.0);
+    --status-upi-bg: oklch(0.24 0.06 248.0);
+    --status-upi-fg: oklch(0.86 0.11 248.0);
+
+    /* Charts */
+    --chart-1: oklch(0.645 0.245 352.5);
+    --chart-2: oklch(0.68 0.16 248.0);
+    --chart-3: oklch(0.70 0.16 152.0);
+    --chart-4: oklch(0.78 0.15 76.0);
+    --chart-5: oklch(0.72 0.15 310.0);
+
+    /* Sidebar */
+    --sidebar: oklch(0.14 0.038 265.0);
+    --sidebar-foreground: oklch(0.8252 0.0095 258.34);
+    --sidebar-primary: oklch(0.645 0.245 352.5);
+    --sidebar-primary-foreground: oklch(1 0 0);
+    --sidebar-accent: oklch(0.22 0.052 264.5);
+    --sidebar-accent-foreground: oklch(1 0 0);
+    --sidebar-border: oklch(0.27 0.042 264.3);
+    --sidebar-ring: oklch(0.645 0.245 352.5);
 }
-
 /* ===== Standard Elements ===== */
-a {
-    font-weight: 500;
-    color: #646cff;
-    text-decoration: inherit;
-}
 
-a:hover {
-    color: #535bf2;
-}
+
 
 body {
     margin: 0;
 }
 
-h1 {
-    font-size: 3.2em;
-    line-height: 1.1;
-}
 
 /* ===== Custom Slim Scrollbar ===== */
 * {

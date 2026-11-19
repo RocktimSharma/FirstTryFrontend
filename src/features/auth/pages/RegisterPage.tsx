@@ -1,10 +1,9 @@
 import {Button} from "@components/ui/button.tsx";
-import {FaFacebook, FaFacebookF, FaGoogle, FaWhatsapp} from "react-icons/fa";
+import {FaFacebookF, FaGoogle, FaWhatsapp} from "react-icons/fa";
 import {ExtendedInput} from "@components/extensions/input.tsx";
 import {useForm} from "react-hook-form";
 import {FormField} from "@components/forms/FormField.tsx";
 import {ArrowRight} from "lucide-react";
-import {FaSquareFacebook} from "react-icons/fa6";
 
 
 const RegisterPage = () => {
@@ -40,7 +39,8 @@ const RegisterPage = () => {
 
 
                     <button
-                        className="group flex w-full cursor-pointer items-center gap-4 rounded-md border  bg-transparent p-4 text-left transition-all hover:border-primary hover:bg-primary/10 hover:shadow-md"
+                        className="group flex w-full cursor-pointer items-center gap-4 rounded-md border  bg-transparent p-4 text-left transition-all hover:border-primary hover:bg-primary/10 hover:shadow-md active:border-primary active:bg-primary/10 active:shadow-md"
+                        onClick={()=>{}}
                     >
                         <div className="flex shrink-0">
                             <FaGoogle size={24}/>
@@ -51,7 +51,8 @@ const RegisterPage = () => {
                             className="text-muted-foreground transition-all duration-200 group-hover:translate-x-1 group-hover:text-primary"
                         /></button>
                     <button
-                        className="group flex w-full cursor-pointer items-center gap-4 rounded-md border  bg-transparent p-4 text-left transition-all hover:border-primary hover:bg-primary/10 hover:shadow-md"
+                        className="group flex w-full cursor-pointer items-center gap-4 rounded-md border  bg-transparent p-4 text-left transition-all hover:border-primary hover:bg-primary/10 hover:shadow-md active:border-primary active:bg-primary/10 active:shadow-md"
+                        onClick={()=>{}}
                     >
                         <div className="flex shrink-0">
                             <FaFacebookF size={24}/>
@@ -62,7 +63,7 @@ const RegisterPage = () => {
                             className="text-muted-foreground transition-all duration-200 group-hover:translate-x-1 group-hover:text-primary"
                         /></button>
                     <button
-                        className="group flex w-full cursor-pointer items-center gap-4 rounded-md border  bg-transparent p-4 text-left transition-all hover:border-primary hover:bg-primary/10 hover:shadow-md"
+                        className="group flex w-full cursor-pointer items-center gap-4 rounded-md border  bg-transparent p-4 text-left transition-all hover:border-primary hover:bg-primary/10 hover:shadow-md active:border-primary active:bg-primary/10 active:shadow-md"
                     >
                         <div className="flex shrink-0">
                             <FaWhatsapp size={24}/>

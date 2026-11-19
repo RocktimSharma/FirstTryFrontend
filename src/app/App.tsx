@@ -7,10 +7,12 @@ import {ThemeProvider} from "@/providers/theme-provider.tsx";
 
 function App() {
     return (
+
         <ThemeProvider
             defaultTheme="dark"
             storageKey="vite-ui-theme"
         >
+
             <RouterProvider router={router} />
         </ThemeProvider>
     );

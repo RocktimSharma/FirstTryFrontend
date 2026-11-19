@@ -1,6 +1,5 @@
-
-import {Navigate, Outlet} from "react-router-dom";
-import { useEffect, useState } from "react";
+import {Outlet} from "react-router-dom";
+import {useEffect, useState} from "react";
 import {ThemeToggle} from "@components/common/theme-toggle.tsx";
 
 
@@ -37,7 +36,7 @@ export default function AuthLayout() {
                     />
                 ))}
 
-                <div className="absolute inset-0 bg-black/30" />
+                <div className="absolute inset-0 bg-black/30"/>
 
                 <div className="absolute bottom-10 left-10 text-white z-10">
                     <h1 className="text-4xl font-bold">UNIM</h1>
@@ -50,13 +49,13 @@ export default function AuthLayout() {
             {/* Right section */}
             <div className="relative flex flex-col h-full">
                 <div className="absolute top-4 right-4 z-20">
-                    <ThemeToggle />
+                    <ThemeToggle/>
                 </div>
 
                 {/* Center content */}
                 <div className="flex-1 flex items-center justify-center px-6">
                     <div className="w-full max-w-md">
-                        <Outlet />
+                        <Outlet/>
                     </div>
                 </div>
 
